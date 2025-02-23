@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Hub</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #34495e;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #f39c12;
+        }
+
+        .login-button {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-left: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-button:hover {
+            background-color: #c0392b;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+            color: #fff;
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero .button {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero .button:hover {
+            background-color: #c0392b;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 4rem;
+            gap: 2.5rem;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+        }
+
+        .card h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+        }
+
+        .card p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 1.5rem;
+        }
+
+        .button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+        .features {
+            padding: 4rem;
+            background-color: #ecf0f1;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+
+        .features ul {
+            list-style-type: none;
+            line-height: 2;
+            margin: 0 auto;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .features li {
+            font-size: 1.3rem;
+            color: #7f8c8d;
+        }
+
+        .testimonials {
+            background-color: #ffffff;
+            padding: 4rem;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonials p {
+            font-size: 1.3rem;
+            color: #7f8c8d;
+            font-style: italic;
+            margin: 1rem auto;
+            max-width: 700px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Book Hub</h1>
+    </header>
+
+    <nav>
+        <a href="#admin">Home</a>
+        <a href="#customer">About us</a>
+        <a href="#delivery">Contact us </a>
+        <a href="#features">Features</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="login.php" class="login-button">Login</a> <!-- Added Login Button -->
+    </nav>
+
+    <div class="hero">
+        <h2>Welcome to Book Hub</h2>
+        <p>Your one-stop platform for all book-related needs. Manage, discover, and deliver seamlessly!</p>
+        <button class="button">Explore Now</button>
+    </div>
+
+    <div class="container">
+        <div class="card" id="admin">
+            <img src="https://via.placeholder.com/160" alt="Admin">
+            <h2>Admin Panel</h2>
+            <p>Comprehensive tools to oversee inventory, manage users, and track business performance.</p>
+            <button class="button">Learn More</button>
+        </div>
+
+        <div class="card" id="customer">
+            <img src="https://via.placeholder.com/160" alt="Customer">
+            <h2>Customer Portal</h2>
+            <p>Effortlessly browse, review, and buy books. Enjoy exclusive offers and seamless transactions.</p>
+           <a href="shop.html"> <button class="button">Shop Now</button></a>
+        </div>
+
+        <div class="card" id="delivery">
+            <img src="https://via.placeholder.com/160" alt="Delivery Boy">
+            <h2>Delivery Dashboard</h2>
+            <p>Stay updated with real-time delivery tracking and optimized routes for quick deliveries.</p>
+            <button class="button">Get Started</button>
+        </div>
+    </div>
+
+    <div class="features" id="features">
+        <h2>Why Choose Book Hub?</h2>
+        <ul>
+            <li>Modern and user-friendly interface for easy navigation.</li>
+            <li>Advanced analytics to track performance and growth.</li>
+            <li>Secure and fast payment options for customers.</li>
+            <li>Seamless communication between admins, customers, and delivery agents.</li>
+            <li>Customizable promotions and offers to boost customer engagement.</li>
+        </ul>
+    </div>
+
+    <div class="testimonials" id="testimonials">
+        <h2>What Our Users Say</h2>
+        <p>"Book Hub has completely transformed how I manage my bookshop. The tools are intuitive and efficient!"</p>
+        <p>"Shopping for books has never been this enjoyable. Great deals and fast delivery!"</p>
+        <p>"As a delivery agent, I love how organized and easy the platform is to use."</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Book Hub. All rights reserved. Designed with ❤️ by [Your Name]</p>
+    </footer>
+</body>
+</html>
